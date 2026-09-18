@@ -6,7 +6,7 @@
     <title>Anna Petrilli — product marketing</title>
     <meta
       name="description"
-      content="Anna Petrilli is a product marketer who turns consumer tests into claims, the next product decision, and the math that proves it."
+      content="Anna Petrilli is a product marketer who turns consumer insight into claims, launches, and the channel math that proves they worked."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,98 +18,202 @@
   </head>
   <body>
     <header class="site-header">
-      <p class="mark">Anna Petrilli</p>
+      <a class="mark" href="#top">Anna Petrilli</a>
       <nav>
         <a href="#work">Work</a>
-        <a href="#now">Now</a>
+        <a href="#stories">Stories</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
-    <main>
+    <main id="top">
       <section class="hero">
-        <p class="eyebrow">Product marketing · consumer insights · growth</p>
-        <h1>
-          I watch people use the thing, write the claim, and prove what should
-          ship next.
-        </h1>
-        <p class="lede">
-          Chicago Booth MBA. Brand and ecommerce at Clorox. Brand management at
-          P&amp;G. Before that, sales on a J.P. Morgan trading floor. I want
-          work where the customer is a person I can put in a lab — not a
-          pipeline.
-        </p>
+        <div class="hero-copy">
+          <p class="eyebrow">Product marketing · consumer insights · growth</p>
+          <h1>I turn “we think” into “we tested.”</h1>
+          <p class="lede">
+            Consumer insight, claims, and the channel math that proves the
+            launch worked. Chicago Booth MBA. Brand and ecommerce at Clorox,
+            brand management at P&amp;G, institutional sales at J.P. Morgan.
+          </p>
+          <a class="button" href="#work">View work</a>
+        </div>
+        <div class="hero-media">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            poster="media/hero-poster.jpg"
+            aria-label="Anna talking to camera"
+          >
+            <source src="media/hero-loop.mp4" type="video/mp4" />
+          </video>
+        </div>
       </section>
 
       <section id="work" class="work">
         <h2>Selected work</h2>
 
-        <article class="job">
-          <div class="job-meta">
-            <p class="org">Clorox</p>
-            <p class="role">Fresh Step &amp; Scoop Away</p>
-          </div>
-          <div class="job-body">
-            <p>
-              Owned brand and ecommerce growth for an $800MM pet-care portfolio
-              while specialty brands crowded the aisle. I ran consumer-insights
-              experiments, tested which claims actually resonated, watched how
-              people used the product, and took innovation from paper to
-              packaging and volume — including retail meetings at Walmart and
-              Target.
-            </p>
-            <p>
-              On the last innovation launch, that stack — claim, creative, test,
-              forecast — produced a 60% sales lift in two months versus the
-              prior period.
-            </p>
-          </div>
-        </article>
+        <div class="grid">
+          <a class="card card-wide" href="#story-spot">
+            <div class="card-media">
+              <video
+                controls
+                preload="metadata"
+                playsinline
+                poster="media/fresh-step-poster.jpg"
+              >
+                <source src="media/fresh-step-60s.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="card-text">
+              <p class="card-title">The 60 second spot</p>
+              <p class="card-tag">Featured</p>
+            </div>
+          </a>
 
-        <article class="job">
-          <div class="job-meta">
-            <p class="org">P&amp;G</p>
-            <p class="role">ZzzQuil · brand intern</p>
-          </div>
-          <div class="job-body">
-            <p>
-              Built a full-funnel go-to-market plan for the ZzzQuil kids suite
-              (15 SKUs) aimed at a 50% sales increase. Rewrote Amazon content
-              for a core kids SKU to lift conversion, and used category sizing
-              and paid-search math to argue for where to put the next dollar.
-            </p>
-          </div>
-        </article>
+          <a class="card" href="#story-circana">
+            <div class="card-media">
+              <img
+                src="images/circana-dashboard.jpg"
+                alt="Circana category dashboard on a laptop"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-text">
+              <p class="card-title">Three days to two hours</p>
+              <p class="card-tag">AI in the workflow</p>
+            </div>
+          </a>
 
-        <article class="job">
-          <div class="job-meta">
-            <p class="org">J.P. Morgan</p>
-            <p class="role">Global Credit Solutions</p>
-          </div>
-          <div class="job-body">
-            <p>
-              Started on the trading floor explaining complicated products to
-              clients. Later launched a marketing campaign for infrequent buyers
-              — who they were, which use cases fit — with technology, sales, and
-              trading in the same room. Useful training. Not the job I’m
-              optimizing for now.
-            </p>
-          </div>
-        </article>
+          <a class="card" href="#story-jpm">
+            <div class="card-media">
+              <img
+                src="images/jpm-trading-floor.jpg"
+                alt="Anna on the J.P. Morgan trading floor"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-text">
+              <p class="card-title">One handbook, four buyers</p>
+              <p class="card-tag">Go to market</p>
+            </div>
+          </a>
+
+          <a class="card" href="#story-launch">
+            <!-- Drop IMG_0455 into images/launch.jpg, then replace the tile below with:
+                 <img src="images/launch.jpg" alt="Fresh Step innovation launch" loading="lazy" /> -->
+            <div class="card-media tile">
+              <span class="big">+60%</span>
+              <span class="small">sales lift in two months</span>
+            </div>
+            <div class="card-text">
+              <p class="card-title">The launch stack</p>
+              <p class="card-tag">Growth</p>
+            </div>
+          </a>
+
+          <a class="card" href="#story-zzzquil">
+            <div class="card-media tile tile-alt">
+              <span class="big">+15%</span>
+              <span class="small">Amazon conversion</span>
+            </div>
+            <div class="card-text">
+              <p class="card-title">The keywords nobody was buying</p>
+              <p class="card-tag">Ecommerce</p>
+            </div>
+          </a>
+        </div>
       </section>
 
-      <section id="now" class="now">
-        <h2>What I’m looking for</h2>
-        <p>
-          B2C product marketing with consumer insights at the center, and
-          growth/performance as the second lane. I want to design the test, sit
-          with users, turn that into positioning and the next product decision,
-          then prove it with channel math.
-        </p>
-        <p>
-          Not looking to be hired as the social person. Short-form and design
-          tools are how I ship a concept in a day — they are not the role.
-        </p>
+      <section id="stories" class="stories">
+        <h2>The stories</h2>
+
+        <article id="story-spot" class="story">
+          <p class="story-tag">Featured · Clorox</p>
+          <h3>The 60 second spot</h3>
+          <p>
+            Cat litter shoppers don’t switch for fun. They switch when the odor
+            wins. Fresh Step needed a 60 second spot with claims strong enough
+            to pull a shopper off the brand already in her cart, and I owned it
+            from the first line of the brief to the final cut. I picked
+            <mark>[two or three]</mark> claims out of a much longer list, each
+            one chosen because it answered why people switch, said something
+            the competition wasn’t saying on shelf, and had an R&amp;D test
+            behind it. Then came the part nobody sees:
+            <mark>[number]</mark> rounds with legal, trading words they
+            couldn’t defend for words that still sold.
+            <mark>[The one trade you made.]</mark> Every round of edits ran
+            through me. It aired. The claims held.
+          </p>
+        </article>
+
+        <article id="story-circana" class="story">
+          <p class="story-tag">AI in the workflow · Clorox</p>
+          <h3>Three days to two hours</h3>
+          <p>
+            Every month, two people spent three days in Excel stitching Circana
+            reports together and hunting for why revenue moved. Slow, ad hoc,
+            impossible to repeat. I consolidated every report into a single
+            pull, then built an AI topline analysis skill that reads the
+            drivers behind the number, not just the number. Same monthly
+            question. New runtime: about two hours. The AI didn’t replace
+            anyone’s judgment. It removed the grind, so the team spent its time
+            on the only thing that mattered: deciding what to do next.
+          </p>
+        </article>
+
+        <article id="story-jpm" class="story">
+          <p class="story-tag">Go to market · J.P. Morgan</p>
+          <h3>One handbook, four buyers</h3>
+          <p>
+            A newly formed credit group at J.P. Morgan was sitting on inventory
+            nobody had a sales motion for: synthetic credit, tranched exposure,
+            assets the bank wanted off its balance sheet. No single buyer
+            wanted all of it. So I stopped pitching and started segmenting.
+            Public finance buyers could read the tax angle. Credit analyst
+            shops could underwrite the risk. Hedge funds wanted the yield.
+            Instead of a pitch per buyer, I built one handbook organized by
+            asset, so a client on the West Coast roadshow could pick what was
+            worth a second conversation. When swaps stalled on back office
+            booking, I got a PM and an engineering team assigned and drove the
+            client portal build myself. Roadshow follow ups traded an
+            additional $300MM in notional.
+          </p>
+        </article>
+
+        <article id="story-launch" class="story">
+          <p class="story-tag">Growth · Clorox</p>
+          <h3>The launch stack</h3>
+          <p>
+            Specialty brands were crowding the litter aisle, and Fresh Step
+            needed an innovation launch that would actually move. I built the
+            whole stack behind it: the claim, the creative, the consumer test
+            that proved the claim landed, and the forecast that told Walmart
+            and Target what to expect. Then I walked into those retail meetings
+            and presented it. Two months after launch, sales were up 60 percent
+            against the prior period. Not because any single piece was clever,
+            but because each piece was built to prove the one before it.
+          </p>
+        </article>
+
+        <article id="story-zzzquil" class="story">
+          <p class="story-tag">Ecommerce · P&amp;G</p>
+          <h3>The keywords nobody was buying</h3>
+          <p>
+            ZzzQuil Kids was telling parents it worked faster. Parents weren’t
+            buying speed. They were buying a quiet house and a kid who slept
+            through the night. I moved the brand from the functional claim to
+            the emotional one, and the imagery from kids alone to parent and
+            child together. Then I looked at where the money was going on
+            Amazon: paid search sat on branded terms and a narrow phrase like
+            “children’s sleep,” while the traffic lived in “kids sleep” and
+            Spanish category terms nobody had bought. I rebuilt the keyword
+            list and the listing’s hidden search terms around the language
+            shoppers actually used. Conversion rose 15 percent.
+          </p>
+        </article>
       </section>
 
       <section id="contact" class="contact">
@@ -118,12 +222,14 @@
           <a href="mailto:anna.petrilli@chicagobooth.edu"
             >anna.petrilli@chicagobooth.edu</a
           >
+          ·
+          <a href="https://www.linkedin.com/in/apetrilli60" rel="me">LinkedIn</a>
         </p>
       </section>
     </main>
 
     <footer>
-      <p>Proof of concept. Built as a simple public page, then I’ll iterate.</p>
+      <p>Anna Petrilli · Walnut Creek, CA</p>
     </footer>
   </body>
 </html>

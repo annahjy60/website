@@ -5,3 +5,9 @@ friend-examples.md
 .env
 .env.*
 node_modules/
+
+# raw source files, not deployed
+instagram videos/
+suno song/
+Video 60s.mp4
+Screenshot*.png
