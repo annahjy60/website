@@ -202,6 +202,7 @@ h1 {
 
 .featured .card {
   width: min(100%, 60%);
+  margin-inline: auto;
 }
 
 .featured .card-media {
@@ -210,7 +211,7 @@ h1 {
 }
 
 .featured-story {
-  max-width: 44rem;
+  max-width: none;
   padding: 1.5rem 0 0;
 }
 
