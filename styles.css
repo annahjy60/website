@@ -197,11 +197,11 @@ h1 {
 }
 
 .featured {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  align-items: center;
-  gap: 2.5rem;
   margin-bottom: 3.5rem;
+}
+
+.featured .card {
+  width: min(100%, 60%);
 }
 
 .featured .card-media {
@@ -210,7 +210,8 @@ h1 {
 }
 
 .featured-story {
-  padding: 0;
+  max-width: 44rem;
+  padding: 1.5rem 0 0;
 }
 
 .featured-story h3 {
@@ -595,14 +596,16 @@ footer p {
     width: min(100%, 240px);
   }
 
-  .grid,
-  .featured {
+  .grid {
     grid-template-columns: 1fr;
   }
 
   .featured {
-    gap: 1.25rem;
     margin-bottom: 2.5rem;
+  }
+
+  .featured .card {
+    width: 100%;
   }
 
   .card-text {
