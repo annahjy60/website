@@ -8,7 +8,20 @@ function openStory(id) {
   body.replaceChildren(...[...source.cloneNode(true).childNodes]);
   const heading = body.querySelector("h3");
   if (heading) heading.id = "dialog-title";
+  dialog.classList.toggle("video-only", id === "spot");
   dialog.showModal();
+  if (id === "spot") {
+    const video = body.querySelector("video");
+    if (video) video.play().catch(() => {});
+  }
+}
+
+function closeStory() {
+  body.querySelectorAll("video").forEach((video) => {
+    video.pause();
+  });
+  dialog.classList.remove("video-only");
+  dialog.close();
 }
 
 function closeStory() {

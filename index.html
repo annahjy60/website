@@ -14,13 +14,13 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Outfit:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=26" />
   </head>
   <body>
     <header class="site-header">
       <a class="mark" href="#top">Anna Petrilli</a>
       <nav>
-        <a class="button button-nav" href="#contact">Get in touch</a>
+        <a class="button" href="#contact">Book meetings</a>
       </nav>
     </header>
 
@@ -28,12 +28,15 @@
       <section class="hero">
         <div class="hero-copy">
           <p class="eyebrow">Product marketing · user insights · growth</p>
-          <h1>GTM grounded in data, delivered in person.</h1>
+          <h1>GTM grounded in data, delivered in person</h1>
           <p class="lede">
-            Based in San Francisco. Happiest in a customer conversation.
+            Based in San Francisco. Happiest in a customer conversation.<br />
             Chicago Booth MBA, Marketing at Clorox, Sales at JP Morgan.
           </p>
-          <a class="button" href="#work">View work</a>
+          <div class="hero-actions">
+            <a class="button" href="#work">View work</a>
+            <a class="button" href="#contact">Book meetings</a>
+          </div>
         </div>
         <div class="hero-media">
           <video
@@ -50,21 +53,45 @@
       </section>
 
       <section id="work" class="work">
-        <h2>Selected work</h2>
+        <h2>Featured work</h2>
 
         <div class="grid">
           <button class="card card-wide" type="button" data-open="spot">
             <div class="card-media">
               <img
-                src="media/fresh-step-poster.jpg"
+                src="media/fresh-step-card.png?v=2"
                 alt="Still from the Fresh Step product video"
               />
             </div>
             <div class="card-text">
-              <p class="card-title">One video, every channel</p>
+              <p class="card-title">The video that ran everywhere</p>
               <p class="card-tag">Featured</p>
             </div>
           </button>
+        </div>
+
+        <article class="featured-story">
+          <h3>The video that ran everywhere</h3>
+          <p>
+            Fresh Step needed one product video that could carry the brand
+            everywhere a shopper might meet it: the Amazon product page, our own
+            site, and retailer media that could end up in a social feed. Three
+            placements, three kinds of attention, one cut. I owned it from brief
+            to final edit. The brief started with what a shopper needs to see
+            before she chooses a litter, and I picked two claims out of a much
+            longer list, each one chosen because it answered why people switch,
+            said something the competition wasn’t saying, and had an R&amp;D test
+            behind it: charcoal traps odor particles like a sponge, and it
+            absorbs more moisture for fewer box changes. Then came the part
+            nobody sees: six rounds with legal, trading words they couldn’t
+            defend for words that still sold, until every claim held up on
+            screen with the sound off and on. Every round of edits ran through
+            me. It went live across all three, and the claims held.
+          </p>
+        </article>
+
+        <h2>Selected work</h2>
+        <div class="grid">
 
           <button class="card" type="button" data-open="circana">
             <div class="card-media">
@@ -83,6 +110,7 @@
           <button class="card" type="button" data-open="jpm">
             <div class="card-media">
               <img
+                class="jpm-photo"
                 src="images/jpm-trading-floor.jpg"
                 alt="Anna on the J.P. Morgan trading floor"
                 loading="lazy"
@@ -95,20 +123,27 @@
           </button>
 
           <button class="card" type="button" data-open="launch">
-            <div class="card-media tile">
-              <span class="big">+60%</span>
-              <span class="small">sales lift in two months</span>
+            <div class="card-media">
+              <img
+                class="launch-photo"
+                src="images/fresh-step-launch.jpg?v=2"
+                alt="Anna with the Fresh Step innovation lineup"
+                loading="lazy"
+              />
             </div>
             <div class="card-text">
-              <p class="card-title">The launch stack</p>
+              <p class="card-title">Innovation launch stack</p>
               <p class="card-tag">Growth</p>
             </div>
           </button>
 
           <button class="card" type="button" data-open="zzzquil">
-            <div class="card-media tile tile-alt">
-              <span class="big">+15%</span>
-              <span class="small">Amazon conversion</span>
+            <div class="card-media">
+              <img
+                src="images/vicks-family.jpg?v=1"
+                alt="Vicks family campaign creative"
+                loading="lazy"
+              />
             </div>
             <div class="card-text">
               <p class="card-title">The keywords nobody was buying</p>
@@ -120,41 +155,34 @@
 
       <section id="contact" class="contact">
         <div class="get-in-touch">
-          <h2>Get in touch</h2>
-          <p>
-            Book a time for coffee, a walkthrough of the work, or a quick intro.
-          </p>
-          <a
-            class="button button-solid"
-            href="https://calendar.google.com/calendar/u/0/r/eventedit?add=annahjy60@gmail.com&amp;text=Chat%20with%20Anna"
-            >Get in touch</a
-          >
+          <div class="get-in-touch-copy">
+            <h2>Book meetings</h2>
+            <p>
+              Book a time for a quick intro or a walkthrough of work.
+            </p>
+            <div class="booking">
+              <a
+                class="button button-solid"
+                href="https://cal.com/anna-petrilli/15min-meeting"
+                >15 minutes</a
+              >
+              <a
+                class="button button-solid"
+                href="https://cal.com/anna-petrilli/30min-meeting"
+                >30 minutes</a
+              >
+            </div>
+          </div>
+          <img
+            class="cal-mark"
+            src="images/calendar.png?v=2"
+            alt=""
+          />
         </div>
 
         <div class="connect">
           <h2>Connect with me</h2>
           <div class="connect-grid">
-            <a
-              class="connect-card"
-              href="https://x.com/annahjy60"
-              rel="me noopener"
-            >
-              <div class="connect-top">
-                <span class="connect-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="22" height="22">
-                    <path
-                      fill="currentColor"
-                      d="M18.244 2H21.5l-7.5 8.57L22.5 22h-6.59l-5.16-6.74L5.2 22H1.94l8.03-9.17L1.5 2h6.76l4.66 6.18L18.244 2zm-1.16 18.2h1.83L7.01 3.7H5.05l12.03 16.5z"
-                    />
-                  </svg>
-                </span>
-                <span class="connect-label">X</span>
-              </div>
-              <p class="connect-handle">@annahjy60</p>
-              <p class="connect-copy">Updates and the short version of the work.</p>
-              <span class="connect-cta">Connect now</span>
-            </a>
-
             <a
               class="connect-card"
               href="https://www.linkedin.com/in/apetrilli60"
@@ -173,6 +201,27 @@
               </div>
               <p class="connect-handle">Anna Petrilli</p>
               <p class="connect-copy">The full career path, in one place.</p>
+              <span class="connect-cta">Connect now</span>
+            </a>
+
+            <a
+              class="connect-card"
+              href="https://x.com/annapetrilli60"
+              rel="me noopener"
+            >
+              <div class="connect-top">
+                <span class="connect-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22">
+                    <path
+                      fill="currentColor"
+                      d="M18.244 2H21.5l-7.5 8.57L22.5 22h-6.59l-5.16-6.74L5.2 22H1.94l8.03-9.17L1.5 2h6.76l4.66 6.18L18.244 2zm-1.16 18.2h1.83L7.01 3.7H5.05l12.03 16.5z"
+                    />
+                  </svg>
+                </span>
+                <span class="connect-label">X</span>
+              </div>
+              <p class="connect-handle">@annapetrilli60</p>
+              <p class="connect-copy">See the recent updates.</p>
               <span class="connect-cta">Connect now</span>
             </a>
 
@@ -204,7 +253,7 @@
     <div hidden>
       <article id="story-spot">
         <p class="story-tag">Featured · Clorox</p>
-        <h3>One video, every channel</h3>
+        <h3>The video that ran everywhere</h3>
         <video
           controls
           preload="metadata"
@@ -213,27 +262,17 @@
         >
           <source src="media/fresh-step-60s.mp4" type="video/mp4" />
         </video>
-        <p>
-          Fresh Step needed one product video that could carry the brand
-          everywhere a shopper might meet it: the Amazon product page, our own
-          site, and retailer media that could end up in a social feed. Three
-          placements, three kinds of attention, one cut. I owned it from brief
-          to final edit. The brief started with what a shopper needs to see
-          before she chooses a litter, and I picked two claims out of a much
-          longer list, each one chosen because it answered why people switch,
-          said something the competition wasn’t saying, and had an R&amp;D test
-          behind it: charcoal traps odor particles like a sponge, and it
-          absorbs more moisture for fewer box changes. Then came the part
-          nobody sees: six rounds with legal, trading words they couldn’t
-          defend for words that still sold, until every claim held up on
-          screen with the sound off and on. Every round of edits ran through
-          me. It went live across all three, and the claims held.
-        </p>
       </article>
 
       <article id="story-circana">
         <p class="story-tag">AI in the workflow · Clorox</p>
         <h3>Three days to two hours</h3>
+        <div class="story-frame">
+          <img
+            src="images/circana-dashboard.jpg"
+            alt="Circana category dashboard on a laptop"
+          />
+        </div>
         <p>
           Every month, two people spent three days in Excel stitching Circana
           reports together and hunting for why revenue moved. Slow, ad hoc,
@@ -249,6 +288,13 @@
       <article id="story-jpm">
         <p class="story-tag">Go to market · J.P. Morgan</p>
         <h3>One handbook, four buyers</h3>
+        <div class="story-frame">
+          <img
+            class="jpm-photo"
+            src="images/jpm-trading-floor.jpg"
+            alt="Anna on the J.P. Morgan trading floor"
+          />
+        </div>
         <p>
           A newly formed credit group at J.P. Morgan was sitting on inventory
           nobody had a sales motion for: synthetic credit, tranched exposure,
@@ -266,7 +312,14 @@
 
       <article id="story-launch">
         <p class="story-tag">Growth · Clorox</p>
-        <h3>The launch stack</h3>
+        <h3>Innovation launch stack</h3>
+        <div class="story-frame">
+          <img
+            class="launch-photo"
+            src="images/fresh-step-launch.jpg?v=2"
+            alt="Anna with the Fresh Step innovation lineup"
+          />
+        </div>
         <p>
           Specialty brands were crowding the litter aisle, and Fresh Step needed
           an innovation launch that would actually move. I built the whole stack
@@ -282,6 +335,12 @@
       <article id="story-zzzquil">
         <p class="story-tag">Ecommerce · P&amp;G</p>
         <h3>The keywords nobody was buying</h3>
+        <div class="story-frame">
+          <img
+            src="images/vicks-family.jpg?v=1"
+            alt="Vicks family campaign creative"
+          />
+        </div>
         <p>
           ZzzQuil Kids was telling parents it worked faster. Parents weren’t
           buying speed. They were buying a quiet house and a kid who slept
@@ -304,6 +363,6 @@
       <div class="dialog-body"></div>
     </dialog>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=10"></script>
   </body>
 </html>
