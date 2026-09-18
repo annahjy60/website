@@ -21,7 +21,6 @@
       <a class="mark" href="#top">Anna Petrilli</a>
       <nav>
         <a href="#work">Work</a>
-        <a href="#stories">Stories</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -56,24 +55,20 @@
         <h2>Selected work</h2>
 
         <div class="grid">
-          <a class="card card-wide" href="#story-spot">
+          <button class="card card-wide" type="button" data-open="spot">
             <div class="card-media">
-              <video
-                controls
-                preload="metadata"
-                playsinline
-                poster="media/fresh-step-poster.jpg"
-              >
-                <source src="media/fresh-step-60s.mp4" type="video/mp4" />
-              </video>
+              <img
+                src="media/fresh-step-poster.jpg"
+                alt="Still from the Fresh Step 60 second spot"
+              />
             </div>
             <div class="card-text">
               <p class="card-title">The 60 second spot</p>
               <p class="card-tag">Featured</p>
             </div>
-          </a>
+          </button>
 
-          <a class="card" href="#story-circana">
+          <button class="card" type="button" data-open="circana">
             <div class="card-media">
               <img
                 src="images/circana-dashboard.jpg"
@@ -85,9 +80,9 @@
               <p class="card-title">Three days to two hours</p>
               <p class="card-tag">AI in the workflow</p>
             </div>
-          </a>
+          </button>
 
-          <a class="card" href="#story-jpm">
+          <button class="card" type="button" data-open="jpm">
             <div class="card-media">
               <img
                 src="images/jpm-trading-floor.jpg"
@@ -99,11 +94,9 @@
               <p class="card-title">One handbook, four buyers</p>
               <p class="card-tag">Go to market</p>
             </div>
-          </a>
+          </button>
 
-          <a class="card" href="#story-launch">
-            <!-- Drop IMG_0455 into images/launch.jpg, then replace the tile below with:
-                 <img src="images/launch.jpg" alt="Fresh Step innovation launch" loading="lazy" /> -->
+          <button class="card" type="button" data-open="launch">
             <div class="card-media tile">
               <span class="big">+60%</span>
               <span class="small">sales lift in two months</span>
@@ -112,9 +105,9 @@
               <p class="card-title">The launch stack</p>
               <p class="card-tag">Growth</p>
             </div>
-          </a>
+          </button>
 
-          <a class="card" href="#story-zzzquil">
+          <button class="card" type="button" data-open="zzzquil">
             <div class="card-media tile tile-alt">
               <span class="big">+15%</span>
               <span class="small">Amazon conversion</span>
@@ -123,97 +116,8 @@
               <p class="card-title">The keywords nobody was buying</p>
               <p class="card-tag">Ecommerce</p>
             </div>
-          </a>
+          </button>
         </div>
-      </section>
-
-      <section id="stories" class="stories">
-        <h2>The stories</h2>
-
-        <article id="story-spot" class="story">
-          <p class="story-tag">Featured · Clorox</p>
-          <h3>The 60 second spot</h3>
-          <p>
-            Cat litter shoppers don’t switch for fun. They switch when the odor
-            wins. Fresh Step needed a 60 second spot with claims strong enough
-            to pull a shopper off the brand already in her cart, and I owned it
-            from the first line of the brief to the final cut. I picked two
-            claims out of a much longer list, each one chosen because it
-            answered why people switch, said something the competition wasn’t
-            saying on shelf, and had an R&amp;D test behind it: charcoal traps
-            odor particles like a sponge, and it absorbs more moisture for
-            fewer box change-outs. Then came the part nobody sees: six rounds
-            with legal, trading words they couldn’t defend for words that still
-            sold. Every round of edits ran through me. It aired. The claims
-            held.
-          </p>
-        </article>
-
-        <article id="story-circana" class="story">
-          <p class="story-tag">AI in the workflow · Clorox</p>
-          <h3>Three days to two hours</h3>
-          <p>
-            Every month, two people spent three days in Excel stitching Circana
-            reports together and hunting for why revenue moved. Slow, ad hoc,
-            impossible to repeat. I consolidated every report into a single
-            pull, then built an AI topline analysis skill that reads the
-            drivers behind the number, not just the number. Same monthly
-            question. New runtime: about two hours. The AI didn’t replace
-            anyone’s judgment. It removed the grind, so the team spent its time
-            on the only thing that mattered: deciding what to do next.
-          </p>
-        </article>
-
-        <article id="story-jpm" class="story">
-          <p class="story-tag">Go to market · J.P. Morgan</p>
-          <h3>One handbook, four buyers</h3>
-          <p>
-            A newly formed credit group at J.P. Morgan was sitting on inventory
-            nobody had a sales motion for: synthetic credit, tranched exposure,
-            assets the bank wanted off its balance sheet. No single buyer
-            wanted all of it. So I stopped pitching and started segmenting.
-            Public finance buyers could read the tax angle. Credit analyst
-            shops could underwrite the risk. Hedge funds wanted the yield.
-            Instead of a pitch per buyer, I built one handbook organized by
-            asset, so a client on the West Coast roadshow could pick what was
-            worth a second conversation. When swaps stalled on back office
-            booking, I got a PM and an engineering team assigned and drove the
-            client portal build myself. Roadshow follow ups traded an
-            additional $300MM in notional.
-          </p>
-        </article>
-
-        <article id="story-launch" class="story">
-          <p class="story-tag">Growth · Clorox</p>
-          <h3>The launch stack</h3>
-          <p>
-            Specialty brands were crowding the litter aisle, and Fresh Step
-            needed an innovation launch that would actually move. I built the
-            whole stack behind it: the claim, the creative, the consumer test
-            that proved the claim landed, and the forecast that told Walmart
-            and Target what to expect. Then I walked into those retail meetings
-            and presented it. Two months after launch, sales were up 60 percent
-            against the prior period. Not because any single piece was clever,
-            but because each piece was built to prove the one before it.
-          </p>
-        </article>
-
-        <article id="story-zzzquil" class="story">
-          <p class="story-tag">Ecommerce · P&amp;G</p>
-          <h3>The keywords nobody was buying</h3>
-          <p>
-            ZzzQuil Kids was telling parents it worked faster. Parents weren’t
-            buying speed. They were buying a quiet house and a kid who slept
-            through the night. I moved the brand from the functional claim to
-            the emotional one, and the imagery from kids alone to parent and
-            child together. Then I looked at where the money was going on
-            Amazon: paid search sat on branded terms and a narrow phrase like
-            “children’s sleep,” while the traffic lived in “kids sleep” and
-            Spanish category terms nobody had bought. I rebuilt the keyword
-            list and the listing’s hidden search terms around the language
-            shoppers actually used. Conversion rose 15 percent.
-          </p>
-        </article>
       </section>
 
       <section id="contact" class="contact">
@@ -231,5 +135,107 @@
     <footer>
       <p>Anna Petrilli · Walnut Creek, CA</p>
     </footer>
+
+    <div hidden>
+      <article id="story-spot">
+        <p class="story-tag">Featured · Clorox</p>
+        <h3>The 60 second spot</h3>
+        <video
+          controls
+          preload="metadata"
+          playsinline
+          poster="media/fresh-step-poster.jpg"
+        >
+          <source src="media/fresh-step-60s.mp4" type="video/mp4" />
+        </video>
+        <p>
+          Cat litter shoppers don’t switch for fun. They switch when the odor
+          wins. Fresh Step needed a 60 second spot with claims strong enough to
+          pull a shopper off the brand already in her cart, and I owned it from
+          the first line of the brief to the final cut. I picked two claims out
+          of a much longer list, each one chosen because it answered why people
+          switch, said something the competition wasn’t saying on shelf, and had
+          an R&amp;D test behind it: charcoal traps odor particles like a
+          sponge, and it absorbs more moisture for fewer box change-outs. Then
+          came the part nobody sees: six rounds with legal, trading words they
+          couldn’t defend for words that still sold. Every round of edits ran
+          through me. It aired. The claims held.
+        </p>
+      </article>
+
+      <article id="story-circana">
+        <p class="story-tag">AI in the workflow · Clorox</p>
+        <h3>Three days to two hours</h3>
+        <p>
+          Every month, two people spent three days in Excel stitching Circana
+          reports together and hunting for why revenue moved. Slow, ad hoc,
+          impossible to repeat. I consolidated every report into a single pull,
+          then built an AI topline analysis skill that reads the drivers behind
+          the number, not just the number. Same monthly question. New runtime:
+          about two hours. The AI didn’t replace anyone’s judgment. It removed
+          the grind, so the team spent its time on the only thing that mattered:
+          deciding what to do next.
+        </p>
+      </article>
+
+      <article id="story-jpm">
+        <p class="story-tag">Go to market · J.P. Morgan</p>
+        <h3>One handbook, four buyers</h3>
+        <p>
+          A newly formed credit group at J.P. Morgan was sitting on inventory
+          nobody had a sales motion for: synthetic credit, tranched exposure,
+          assets the bank wanted off its balance sheet. No single buyer wanted
+          all of it. So I stopped pitching and started segmenting. Public
+          finance buyers could read the tax angle. Credit analyst shops could
+          underwrite the risk. Hedge funds wanted the yield. Instead of a pitch
+          per buyer, I built one handbook organized by asset, so a client on the
+          West Coast roadshow could pick what was worth a second conversation.
+          When swaps stalled on back office booking, I got a PM and an
+          engineering team assigned and drove the client portal build myself.
+          Roadshow follow ups traded an additional $300MM in notional.
+        </p>
+      </article>
+
+      <article id="story-launch">
+        <p class="story-tag">Growth · Clorox</p>
+        <h3>The launch stack</h3>
+        <p>
+          Specialty brands were crowding the litter aisle, and Fresh Step needed
+          an innovation launch that would actually move. I built the whole stack
+          behind it: the claim, the creative, the consumer test that proved the
+          claim landed, and the forecast that told Walmart and Target what to
+          expect. Then I walked into those retail meetings and presented it. Two
+          months after launch, sales were up 60 percent against the prior
+          period. Not because any single piece was clever, but because each
+          piece was built to prove the one before it.
+        </p>
+      </article>
+
+      <article id="story-zzzquil">
+        <p class="story-tag">Ecommerce · P&amp;G</p>
+        <h3>The keywords nobody was buying</h3>
+        <p>
+          ZzzQuil Kids was telling parents it worked faster. Parents weren’t
+          buying speed. They were buying a quiet house and a kid who slept
+          through the night. I moved the brand from the functional claim to the
+          emotional one, and the imagery from kids alone to parent and child
+          together. Then I looked at where the money was going on Amazon: paid
+          search sat on branded terms and a narrow phrase like “children’s
+          sleep,” while the traffic lived in “kids sleep” and Spanish category
+          terms nobody had bought. I rebuilt the keyword list and the listing’s
+          hidden search terms around the language shoppers actually used.
+          Conversion rose 15 percent.
+        </p>
+      </article>
+    </div>
+
+    <dialog class="story-dialog" id="story-dialog" aria-labelledby="dialog-title">
+      <button class="dialog-close" type="button" aria-label="Close story">
+        Close
+      </button>
+      <div class="dialog-body"></div>
+    </dialog>
+
+    <script src="script.js"></script>
   </body>
 </html>

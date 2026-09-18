@@ -1,13 +1,16 @@
 :root {
-  --paper: #f3ead9;
-  --ink: #1f1a14;
-  --muted: #5c5348;
-  --rule: #d7cbb6;
-  --card: #fbf6ec;
-  --accent: #2f5d4a;
-  --accent-hover: #1f4335;
-  --tile: #2f5d4a;
-  --tile-alt: #8a4b2a;
+  --paper: #000;
+  --ink: #fff;
+  --muted: #a8a8a8;
+  --rule: #2a2a2a;
+  --card: #fff;
+  --card-ink: #111;
+  --card-muted: #555;
+  --card-rule: #e4e4e4;
+  --accent: #fff;
+  --accent-hover: #d6d6d6;
+  --tile: #000;
+  --tile-alt: #111;
 }
 
 *,
@@ -90,7 +93,7 @@ nav a:hover {
 
 .eyebrow {
   margin: 0 0 1rem;
-  color: var(--accent);
+  color: var(--muted);
   font-size: 0.82rem;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -116,15 +119,16 @@ h1 {
 .button {
   display: inline-block;
   padding: 0.7rem 1.3rem;
+  border: 1px solid var(--ink);
   border-radius: 999px;
-  background: var(--accent);
-  color: var(--paper);
+  background: transparent;
+  color: var(--ink);
   font-weight: 500;
   text-decoration: none;
 }
 
 .button:hover {
-  background: var(--accent-hover);
+  background: var(--ink);
   color: var(--paper);
 }
 
@@ -134,8 +138,8 @@ h1 {
   aspect-ratio: 9 / 16;
   overflow: hidden;
   border-radius: 1.25rem;
-  background: var(--ink);
-  box-shadow: 0 20px 50px rgba(31, 26, 20, 0.18);
+  background: #111;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
 }
 
 .hero-media video {
@@ -148,7 +152,6 @@ h1 {
 /* Sections */
 
 .work,
-.stories,
 .contact {
   padding: 0 0 3rem;
   border-top: 1px solid var(--rule);
@@ -173,19 +176,25 @@ h2 {
 
 .card {
   display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   overflow: hidden;
-  border: 1px solid var(--rule);
+  border: 1px solid var(--card);
   border-radius: 1rem;
   background: var(--card);
-  color: var(--ink);
+  color: var(--card-ink);
+  font: inherit;
+  text-align: left;
   text-decoration: none;
+  cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
-  color: var(--ink);
+  color: var(--card-ink);
   transform: translateY(-3px);
-  box-shadow: 0 14px 34px rgba(31, 26, 20, 0.12);
+  box-shadow: 0 14px 34px rgba(255, 255, 255, 0.12);
 }
 
 .card-wide {
@@ -195,7 +204,7 @@ h2 {
 .card-media {
   aspect-ratio: 16 / 10;
   overflow: hidden;
-  background: var(--ink);
+  background: #111;
 }
 
 .card-wide .card-media {
@@ -210,10 +219,6 @@ h2 {
   object-fit: cover;
 }
 
-.card-media img {
-  background: #fff;
-}
-
 .tile {
   display: flex;
   flex-direction: column;
@@ -221,7 +226,7 @@ h2 {
   justify-content: flex-end;
   padding: 1.5rem;
   background: var(--tile);
-  color: var(--paper);
+  color: var(--ink);
 }
 
 .tile-alt {
@@ -261,55 +266,79 @@ h2 {
   margin: 0;
   flex-shrink: 0;
   padding: 0.2rem 0.65rem;
-  border: 1px solid var(--rule);
+  border: 1px solid var(--card-rule);
   border-radius: 999px;
-  color: var(--muted);
+  color: var(--card-muted);
   font-size: 0.78rem;
   font-weight: 500;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
-/* Stories */
+/* Story overlay */
 
-.story {
-  max-width: 44rem;
-  padding: 1.75rem 0;
-  border-bottom: 1px solid var(--rule);
-  scroll-margin-top: 2rem;
+.story-dialog {
+  width: min(640px, calc(100% - 2rem));
+  max-height: min(88vh, 900px);
+  padding: 1.5rem 1.5rem 1.75rem;
+  overflow: auto;
+  border: 1px solid #fff;
+  border-radius: 1rem;
+  background: #fff;
+  color: var(--card-ink);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.7);
 }
 
-.story:last-child {
-  border-bottom: none;
+.story-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.72);
+}
+
+.dialog-close {
+  display: block;
+  margin: 0 0 1.25rem auto;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid var(--card-ink);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--card-ink);
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.dialog-close:hover {
+  background: var(--card-ink);
+  color: #fff;
 }
 
 .story-tag {
   margin: 0 0 0.35rem;
-  color: var(--accent);
+  color: var(--card-muted);
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
-.story h3 {
-  margin: 0 0 0.75rem;
+.dialog-body h3 {
+  margin: 0 0 1rem;
   font-family: Fraunces, Georgia, serif;
   font-size: 1.6rem;
   font-weight: 500;
   letter-spacing: -0.01em;
 }
 
-.story p {
+.dialog-body p {
   margin: 0;
-  color: var(--muted);
+  color: var(--card-muted);
 }
 
-mark {
-  padding: 0 0.2em;
-  border-radius: 0.2em;
-  background: #ffe28a;
-  color: var(--ink);
+.dialog-body video {
+  display: block;
+  width: 100%;
+  margin: 0 0 1.1rem;
+  border-radius: 0.6rem;
+  background: #000;
 }
 
 /* Contact and footer */
