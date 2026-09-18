@@ -20,20 +20,18 @@
     <header class="site-header">
       <a class="mark" href="#top">Anna Petrilli</a>
       <nav>
-        <a href="#work">Work</a>
-        <a href="#contact">Contact</a>
+        <a class="button button-nav" href="#contact">Get in touch</a>
       </nav>
     </header>
 
     <main id="top">
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">Product marketing · consumer insights · growth</p>
-          <h1>I turn “we think” into “we tested.”</h1>
+          <p class="eyebrow">Product marketing · user insights · growth</p>
+          <h1>GTM grounded in data, delivered in person.</h1>
           <p class="lede">
-            Consumer insight, claims, and the channel math that proves the
-            launch worked. Chicago Booth MBA. Brand and ecommerce at Clorox,
-            brand management at P&amp;G, institutional sales at J.P. Morgan.
+            Based in San Francisco. Happiest in a customer conversation.
+            Chicago Booth MBA, Marketing at Clorox, Sales at JP Morgan.
           </p>
           <a class="button" href="#work">View work</a>
         </div>
@@ -43,10 +41,10 @@
             muted
             loop
             playsinline
-            poster="media/hero-poster.jpg"
+            poster="media/hero-intro.jpg?v=2"
             aria-label="Anna talking to camera"
           >
-            <source src="media/hero-loop.mp4" type="video/mp4" />
+            <source src="media/hero-intro.mp4?v=2" type="video/mp4" />
           </video>
         </div>
       </section>
@@ -59,11 +57,11 @@
             <div class="card-media">
               <img
                 src="media/fresh-step-poster.jpg"
-                alt="Still from the Fresh Step 60 second spot"
+                alt="Still from the Fresh Step Amazon product video"
               />
             </div>
             <div class="card-text">
-              <p class="card-title">The 60 second spot</p>
+              <p class="card-title">The video that had to sell on mute</p>
               <p class="card-tag">Featured</p>
             </div>
           </button>
@@ -121,25 +119,92 @@
       </section>
 
       <section id="contact" class="contact">
-        <h2>Contact</h2>
-        <p>
-          <a href="mailto:anna.petrilli@chicagobooth.edu"
-            >anna.petrilli@chicagobooth.edu</a
+        <div class="get-in-touch">
+          <h2>Get in touch</h2>
+          <p>
+            Book a time for coffee, a walkthrough of the work, or a quick intro.
+          </p>
+          <a
+            class="button button-solid"
+            href="https://calendar.google.com/calendar/u/0/r/eventedit?add=annahjy60@gmail.com&amp;text=Chat%20with%20Anna"
+            >Get in touch</a
           >
-          ·
-          <a href="https://www.linkedin.com/in/apetrilli60" rel="me">LinkedIn</a>
-        </p>
+        </div>
+
+        <div class="connect">
+          <h2>Connect with me</h2>
+          <div class="connect-grid">
+            <a
+              class="connect-card"
+              href="https://x.com/annahjy60"
+              rel="me noopener"
+            >
+              <div class="connect-top">
+                <span class="connect-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22">
+                    <path
+                      fill="currentColor"
+                      d="M18.244 2H21.5l-7.5 8.57L22.5 22h-6.59l-5.16-6.74L5.2 22H1.94l8.03-9.17L1.5 2h6.76l4.66 6.18L18.244 2zm-1.16 18.2h1.83L7.01 3.7H5.05l12.03 16.5z"
+                    />
+                  </svg>
+                </span>
+                <span class="connect-label">X</span>
+              </div>
+              <p class="connect-handle">@annahjy60</p>
+              <p class="connect-copy">Updates and the short version of the work.</p>
+              <span class="connect-cta">Connect now</span>
+            </a>
+
+            <a
+              class="connect-card"
+              href="https://www.linkedin.com/in/apetrilli60"
+              rel="me"
+            >
+              <div class="connect-top">
+                <span class="connect-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22">
+                    <path
+                      fill="currentColor"
+                      d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.21 0 22.23 0z"
+                    />
+                  </svg>
+                </span>
+                <span class="connect-label">LinkedIn</span>
+              </div>
+              <p class="connect-handle">Anna Petrilli</p>
+              <p class="connect-copy">The full career path, in one place.</p>
+              <span class="connect-cta">Connect now</span>
+            </a>
+
+            <a class="connect-card" href="mailto:annahjy60@gmail.com">
+              <div class="connect-top">
+                <span class="connect-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22">
+                    <path
+                      fill="currentColor"
+                      d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"
+                    />
+                  </svg>
+                </span>
+                <span class="connect-label">Email</span>
+              </div>
+              <p class="connect-handle">annahjy60@gmail.com</p>
+              <p class="connect-copy">The direct line if a calendar slot isn’t right.</p>
+              <span class="connect-cta">Write now</span>
+            </a>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer>
-      <p>Anna Petrilli · Walnut Creek, CA</p>
+      <p>Anna Petrilli, San Francisco, CA</p>
     </footer>
 
     <div hidden>
       <article id="story-spot">
-        <p class="story-tag">Featured · Clorox</p>
-        <h3>The 60 second spot</h3>
+        <p class="story-tag">Featured · Clorox · Amazon</p>
+        <h3>The video that had to sell on mute</h3>
         <video
           controls
           preload="metadata"
@@ -149,17 +214,19 @@
           <source src="media/fresh-step-60s.mp4" type="video/mp4" />
         </video>
         <p>
-          Cat litter shoppers don’t switch for fun. They switch when the odor
-          wins. Fresh Step needed a 60 second spot with claims strong enough to
-          pull a shopper off the brand already in her cart, and I owned it from
-          the first line of the brief to the final cut. I picked two claims out
+          Amazon shoppers don’t watch a product video. They scroll past it,
+          sound off, halfway to the next listing. Fresh Step needed a video on
+          its product page that could stop that scroll and close the sale, and
+          I owned it from brief to final cut. The brief started with what a
+          shopper needs to see before she adds to cart. I picked two claims out
           of a much longer list, each one chosen because it answered why people
-          switch, said something the competition wasn’t saying on shelf, and had
+          switch litter, said something the competition wasn’t saying, and had
           an R&amp;D test behind it: charcoal traps odor particles like a
-          sponge, and it absorbs more moisture for fewer box change-outs. Then
-          came the part nobody sees: six rounds with legal, trading words they
-          couldn’t defend for words that still sold. Every round of edits ran
-          through me. It aired. The claims held.
+          sponge, and it absorbs more moisture for fewer box changes. Then came
+          the part nobody sees: six rounds with legal, trading words they
+          couldn’t defend for words that still sold, and every claim had to
+          land on screen, not just in the voiceover. Every round of edits ran
+          through me. It went live on the page. The claims held.
         </p>
       </article>
 
