@@ -399,8 +399,19 @@ h2 {
   display: none;
 }
 
+/* The [open] guard keeps the closed dialog's UA display: none intact. */
+.story-dialog.video-only[open] {
+  display: flex;
+  flex-direction: column;
+}
+
+.story-dialog.video-only .dialog-body {
+  order: 1;
+}
+
 .story-dialog.video-only .dialog-close {
-  margin: 0 0 0.65rem auto;
+  order: 2;
+  margin: 0.7rem auto 0;
 }
 
 .story-dialog.video-only video {
