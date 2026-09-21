@@ -1,6 +1,7 @@
 const dialog = document.getElementById("story-dialog");
 const body = dialog.querySelector(".dialog-body");
 const closeButton = dialog.querySelector(".dialog-close");
+const heroLoop = document.querySelector(".hero-media video");
 
 function openStory(id) {
   const source = document.getElementById(`story-${id}`);
@@ -8,20 +9,16 @@ function openStory(id) {
   body.replaceChildren(...[...source.cloneNode(true).childNodes]);
   const heading = body.querySelector("h3");
   if (heading) heading.id = "dialog-title";
-  dialog.classList.toggle("video-only", id === "spot");
+  const video = body.querySelector("video");
+  const videoOnly = Boolean(video) && !body.querySelector("p:not(.story-tag)");
+  dialog.classList.toggle("video-only", videoOnly);
+  dialog.classList.toggle("video-portrait", source.dataset.orientation === "portrait");
+  if (heroLoop) heroLoop.pause();
   dialog.showModal();
-  if (id === "spot") {
-    const video = body.querySelector("video");
-    if (video) video.play().catch(() => {});
+  if (videoOnly) {
+    video.muted = false;
+    video.play().catch(() => {});
   }
-}
-
-function closeStory() {
-  body.querySelectorAll("video").forEach((video) => {
-    video.pause();
-  });
-  dialog.classList.remove("video-only");
-  dialog.close();
 }
 
 function closeStory() {
@@ -45,4 +42,5 @@ dialog.addEventListener("close", () => {
   body.querySelectorAll("video").forEach((video) => {
     video.pause();
   });
+  if (heroLoop) heroLoop.play().catch(() => {});
 });
