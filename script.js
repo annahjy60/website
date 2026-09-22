@@ -44,3 +44,34 @@ dialog.addEventListener("close", () => {
   });
   if (heroLoop) heroLoop.play().catch(() => {});
 });
+
+const menuToggle = document.querySelector(".menu-toggle");
+const menuPanel = document.getElementById("site-menu");
+
+function setMenu(open) {
+  menuToggle.setAttribute("aria-expanded", String(open));
+  menuPanel.hidden = !open;
+}
+
+menuToggle.addEventListener("click", () => {
+  setMenu(menuToggle.getAttribute("aria-expanded") !== "true");
+});
+
+menuPanel.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    setTimeout(() => setMenu(false), 0);
+  });
+});
+
+document.addEventListener("click", (event) => {
+  if (!menuToggle.contains(event.target) && !menuPanel.contains(event.target)) {
+    setMenu(false);
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && menuToggle.getAttribute("aria-expanded") === "true") {
+    setMenu(false);
+    menuToggle.focus();
+  }
+});
