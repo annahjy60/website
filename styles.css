@@ -650,6 +650,15 @@ footer p {
     display: none;
   }
 
+  .lede {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .lede-cred {
+    order: -1;
+  }
+
   .hero-media {
     justify-self: center;
     width: min(100%, 180px);
