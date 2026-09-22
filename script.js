@@ -15,7 +15,7 @@ function openStory(id) {
   dialog.classList.toggle("video-portrait", source.dataset.orientation === "portrait");
   if (heroLoop) heroLoop.pause();
   dialog.showModal();
-  if (videoOnly) {
+  if (video) {
     video.muted = false;
     video.play().catch(() => {});
   }
