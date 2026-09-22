@@ -645,9 +645,14 @@ footer p {
     padding-top: 2.5rem;
   }
 
+  .eyebrow,
+  .desktop-only {
+    display: none;
+  }
+
   .hero-media {
-    justify-self: start;
-    width: min(100%, 240px);
+    justify-self: center;
+    width: min(100%, 180px);
   }
 
   .grid {
