@@ -28,9 +28,24 @@ function closeStory() {
   dialog.close();
 }
 
-document.querySelectorAll("[data-open]").forEach((card) => {
-  card.addEventListener("click", () => openStory(card.dataset.open));
+document.addEventListener("click", (event) => {
+  const card = event.target.closest("[data-open]");
+  if (card) openStory(card.dataset.open);
 });
+
+const homeSelected = document.querySelector(".home-selected");
+if (homeSelected) {
+  fetch("selected.html")
+    .then((response) => response.text())
+    .then((html) => {
+      const page = new DOMParser().parseFromString(html, "text/html");
+      const grid = page.querySelector(".page-work .grid");
+      const stories = page.querySelector("article[id^='story-']")?.parentElement;
+      if (grid) homeSelected.append(grid);
+      if (stories) document.body.append(stories);
+    })
+    .catch(() => homeSelected.remove());
+}
 
 closeButton.addEventListener("click", closeStory);
 
